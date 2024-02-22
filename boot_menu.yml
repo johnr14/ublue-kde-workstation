@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: blue-build/template
+  - label: johnr14/ublue-kde-workstation
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: blue-build/template
+      - label: ublue-kde-workstation
