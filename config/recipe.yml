@@ -146,4 +146,11 @@ modules:
         #- plasma-discover-notifier
         #- plasma-discover-rpm-ostree
 
+  - type: systemd
+    system:
+      #enabled:
+        #- on_boot.service
+      disabled:
+        - rpm-ostree-countme.timer # RedHat telemetry disabling  
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
