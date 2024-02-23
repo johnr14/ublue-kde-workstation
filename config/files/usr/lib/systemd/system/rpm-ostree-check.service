@@ -1,0 +1,9 @@
+[Unit]    
+Description=Run once on reboot to check if a rpm-ostree was deployed of if it's the first boot  
+Wants=rpm-ostree-check.timer  
+
+[Service]
+Type=simple
+# Do not log an error if it is not run
+# Make sure your own process writes to journal for debugging it's errors
+ExecStart=/usr/local/bin/rpm-ostree-check

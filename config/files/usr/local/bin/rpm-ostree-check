@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Test an ostree distribution for rebase or first install.
+#
+
+# Check for first boot
+firstboot=$(journalctl --list-boots | wc -l)
+
+# First line is header, if -gt 2 then it is not it's first boot !
+if [[ $firstboot -lt 3 ]]; then
+        echo "This is the first boot"
+        # DO SOMETHING
+else
+        echo "This is not the first boot"
+fi
+
+# Check for rebase
+
+#justrebased=$(journalctl --boot=-1 -u ostree-finalize-staged.service | grep "Finalizing staged deployment")
+justrebased=$(journalctl -u ostree-finalize-staged.service | grep "Finalizing staged deployment" | wc -l)
+echo $justrebased
+
+if [[ $justrebased -gt 0 ]]; then
+        echo "This just got rebased before reboot"
+        # DO SOMETHING
+else
+        echo "This has not been rebased this reboot"
+fi
+
+# Clean exit
+exit 0
