@@ -4,6 +4,6 @@ Wants=rpm-ostreed-deployed.timer
 
 [Service]
 Type=simple
-ExecStartPre=/usr/bin/env bash -c 'journalctl --boot=-1 | grep ostree | grep "Finalizing staged deployment"'
+ExecStartPre=/usr/bin/env bash -c 'journalctl --boot=-1 -u ostree-finalized-staged.service | grep "Finalizing staged deployment"'
 #return 0 if there was a deployment and 1 if there was no deployment
 ExecStart=/usr/bin/env bash -c 'echo "There was a deployment and this is the firstboot!" > /tmp/firstboot_post_deployment.txt'
