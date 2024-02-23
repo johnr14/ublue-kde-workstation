@@ -152,11 +152,11 @@ modules:
       #enabled:
         #- on_boot.service
         #- rc-local.service
-        #- sshd.service
+        - sshd.service
       disabled:
         - rpm-ostree-countme.timer # RedHat telemetry disabling  
         - rpm-ostree-countme.service
-        - sshd.service
+        #- sshd.service
       #masked:
       #  - rpm-ostree-countme.service
       #  - rpm-ostree-countme.timer
