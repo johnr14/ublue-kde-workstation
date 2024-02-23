@@ -1,10 +1,10 @@
-[Unit]
-Description=Run on boot
+[Unit]    
+Description=Run once on reboot to check if a rpm-ostree was deployed   
+Wants=rpm-ostreed-deployed.timer  
 
-[Timer]
-OnBootSec=10
-Unit=rpm-ostreed-deployed.service
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/env bash -c 'journalctl --boot=-1 | grep ostree | grep "Finalizing staged deployment"'
+#return 0 if there was a deployment and 1 if there was no deployment
+ExecStart=/usr/bin/env bash -c 'echo "There was a deployment and this is the firstboot!" > /tmp/firstboot_post_deployment.txt'
 
-[Install]
-# To have it run only at boot
-WantedBy=multi-user.target
