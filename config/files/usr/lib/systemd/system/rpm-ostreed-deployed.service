@@ -4,6 +4,9 @@ Wants=rpm-ostreed-deployed.timer
 
 [Service]
 Type=simple
+# Do not log an error if it is not run
+# Make sure your own process writes to journal for debugging it's errors
+StandardError=null
 ExecStartPre=/usr/bin/env bash -c 'journalctl --boot=-1 -u ostree-finalize-staged.service | grep "Finalizing staged deployment"'
 #return 0 if there was a deployment and 1 if there was no deployment
 ExecStart=/usr/bin/env bash -c 'echo "There was a deployment and this is the firstboot!" > /tmp/firstboot_post_deployment.txt'
