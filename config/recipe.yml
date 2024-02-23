@@ -154,6 +154,7 @@ modules:
         #- rc-local.service
         - sshd.service
         - rpm-ostreed-deployed.timer
+        - rpm-ostreed-firstboot.timer
       disabled:
         - rpm-ostree-countme.timer # RedHat telemetry disabling  
         - rpm-ostree-countme.service
