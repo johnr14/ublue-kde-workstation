@@ -152,5 +152,9 @@ modules:
         #- on_boot.service
       disabled:
         - rpm-ostree-countme.timer # RedHat telemetry disabling  
+        - rpm-ostree-countme.service
+      masked:
+        - rpm-ostree-countme.service
+        - rpm-ostree-countme.timer
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
