@@ -1,0 +1,10 @@
+[Unit]
+Description=Run on boot
+
+[Timer]
+OnBootSec=10
+Unit=rpm-ostreed-firstboot.service
+
+[Install]
+# To have it run only at boot
+WantedBy=multi-user.target
