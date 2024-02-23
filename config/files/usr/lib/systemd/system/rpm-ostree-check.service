@@ -6,4 +6,4 @@ Wants=rpm-ostree-check.timer
 Type=simple
 # Do not log an error if it is not run
 # Make sure your own process writes to journal for debugging it's errors
-ExecStart=/usr/local/bin/rpm-ostree-check
+ExecStart=/usr/bin/rpm-ostree-check
