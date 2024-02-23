@@ -1,5 +1,5 @@
 [Unit]    
-Description=Run once on reboot to check if a rpm-ostree was deployed   
+Description=Run once on boot to check if this is a new install   
 Wants=rpm-ostreed-firstboot.timer  
 
 [Service]
