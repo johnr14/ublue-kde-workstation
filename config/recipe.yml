@@ -27,6 +27,7 @@ modules:
         - btop
         - colordiff
         - curl
+        - dfc
         - expect
         - git
         - htop
@@ -150,10 +151,14 @@ modules:
     system:
       #enabled:
         #- on_boot.service
+        #- rc-local.service
       disabled:
         - rpm-ostree-countme.timer # RedHat telemetry disabling  
         - rpm-ostree-countme.service
-      masked:
+      #masked:
+      #  - rpm-ostree-countme.service
+      #  - rpm-ostree-countme.timer
+      unmasked:
         - rpm-ostree-countme.service
         - rpm-ostree-countme.timer
 
