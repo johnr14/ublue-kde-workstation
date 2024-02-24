@@ -166,8 +166,8 @@ modules:
       #  - rpm-ostree-countme.timer
 
 
-   - type: scripts
-        script:
-          - set_files_permission.sh
+ - type: script
+   scripts:
+    - set_files_permission.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
