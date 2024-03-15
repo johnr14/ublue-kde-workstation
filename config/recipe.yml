@@ -4,8 +4,8 @@ name: ublue-kde-workstation
 description: This is my personal OS KDE image with additionnal applications installed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 40 # latest is also supported if you want new updates ASAP; rawhide is unavailable
+base-image: quay.io/fedora/fedora-kinoite
+image-version: rawhide # latest is also supported if you want new updates ASAP; rawhide is unavailable
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
