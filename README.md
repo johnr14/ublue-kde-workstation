@@ -1,3 +1,10 @@
+# Custom modification
+
+Image is set to rawhide from original Fedora Kinoite.
+
+I added most applicastions I used and wanted available on my system. For the rest, using toolbox/distrobox is ok.
+Also, trying to add hyprland along side KDE so it can be choosen.
+
 # ublue-kde-workstation
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.

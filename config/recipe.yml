@@ -25,7 +25,9 @@ modules:
 
 
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repoo
+        - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
+        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
     install:
       # BASE
         - ansible
@@ -34,6 +36,7 @@ modules:
         - colordiff
         - curl
         - dfc
+        - duf
         - expect
         - git
         - htop
@@ -94,6 +97,9 @@ modules:
       # MULTIMEDIA
         - yt-dlp
         - yt-dlp-bash-completion
+      # Terminal
+        - alacritty
+        - kitty
       # UTILS
         - borgbackup
         - borgmatic
@@ -112,6 +118,65 @@ modules:
         - virt-manager
         - virt-top
         - virt-viewer
+      ################
+        - hyprland
+        - hyprpaper # wallpaper util
+        - hyprpicker # color picker
+        - hyprshot # screenshot util
+        - xdg-desktop-portal-hyprland # desktop portal
+
+      # nwg-shell
+        - nwg-shell
+        - nwg-bar
+        - nwg-displays
+        - nwg-dock
+        - nwg-drawer
+        - nwg-icon-picker
+        - nwg-look
+        - nwg-menu
+        - nwg-panel
+        - nwg-shell-config
+        - nwg-shell-wallpapers
+
+      # audio
+        - pavucontrol
+        - pipewire
+        - playerctl
+        - wireplumber
+
+      # bluetooth
+        - blueman
+
+      # network
+        - network-manager-applet
+        - NetworkManager-l2tp-gnome
+        - NetworkManager-libreswan-gnome
+        - NetworkManager-openconnect-gnome
+        - NetworkManager-openvpn-gnome
+        - NetworkManager-pptp-gnome
+        - NetworkManager-sstp-gnome
+        - NetworkManager-vpnc-gnome
+
+      # qt
+        - qt5-qtwayland
+        - qt6-qtwayland
+
+      # other
+        - bolt
+        - brightnessctl
+        - dunst # notification daemon
+        - fprintd-pam
+        - gnome-keyring-pam
+        - lxqt-policykit
+        - nautilus
+        - pinentry-gnome3
+        - plymouth-system-theme
+        - rofi-wayland
+        - sddm-wayland-generic # display manager
+        - system-config-printer
+        - waybar
+        - wl-clipboard
+
 
     remove:
       - firefox # default firefox removed in favor of flatpak
