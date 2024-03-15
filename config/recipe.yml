@@ -172,7 +172,7 @@ modules:
         - pinentry-gnome3
         - plymouth-system-theme
         - rofi-wayland
-        - sddm-wayland-generic # display manager
+          #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
         - system-config-printer
         - waybar
         - wl-clipboard
