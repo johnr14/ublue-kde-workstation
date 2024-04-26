@@ -25,7 +25,7 @@ modules:
 
 
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repoo
+    repos:
         - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
         - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
         - https://copr.fedorainfracloud.org/coprs/wef/gtklock/repo/fedora-rawhide/wef-gtklock-fedora-rawhide.repo
@@ -138,6 +138,7 @@ modules:
         - nwg-panel
         - nwg-shell-config
         - nwg-shell-wallpapers
+        - gtklock
 
       # audio
         - pavucontrol
