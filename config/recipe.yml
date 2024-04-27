@@ -28,7 +28,7 @@ modules:
     repos:
         - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
         - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
-        - https://copr.fedorainfracloud.org/coprs/wef/gtklock/repo/fedora-rawhide/wef-gtklock-fedora-rawhide.repo
+        # - https://copr.fedorainfracloud.org/coprs/wef/gtklock/repo/fedora-rawhide/wef-gtklock-fedora-rawhide.repo # Obsolete
     install:
       # BASE
         - ansible
@@ -125,6 +125,10 @@ modules:
         - hyprpicker # color picker
         - hyprshot # screenshot util
         - xdg-desktop-portal-hyprland # desktop portal
+        - hyprlock
+        - hypridle
+        - hyprshot
+        - swaylock-effects
 
       # nwg-shell
         - nwg-shell
@@ -138,7 +142,6 @@ modules:
         - nwg-panel
         - nwg-shell-config
         - nwg-shell-wallpapers
-        - gtklock
 
       # audio
         - pavucontrol
