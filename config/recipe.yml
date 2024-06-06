@@ -32,12 +32,19 @@ modules:
       # BASE
         - ansible
         - aria2
+        - bat
+        - bind-utils
         - btop
         - colordiff
         - curl
         - dfc
+        - dua-cli
         - duf
         - expect
+        - eza
+        - fd-find
+        - fish
+        - fzf
         - git
         - htop
         - inxi
@@ -49,23 +56,16 @@ modules:
         - neovim
         - net-tools
         - nmon
+        - procs
         - pv
         - screen
+        - smartmontools
         - stow
+        - tldr
         - tmux
+        - tree
         - wget
         - zoxide
-        - tldr
-        - fd-find
-        - dua-cli
-        - fish
-        - bat
-        - smartmontools
-        - procs
-        - tree
-        - bind-utils
-        - fzf
-        - eza
       # COMPRESSION
         - p7zip
         - unrar
@@ -78,14 +78,14 @@ modules:
         - usbmuxd
       # ENCRYPTION
         - pass
+        - gopass
         - qtpass
       # KDE
         - kate
-        #- kdenlive
+        - kdenlive
         - kompare
         - krdc
         - krfb
-        - qownnotes
         - yakuake
       # LANGUAGE
         - langpacks-en
@@ -96,7 +96,8 @@ modules:
         - printer-driver-brlaser
       # MULTIMEDIA
         - yt-dlp
-        - yt-dlp-bash-completion
+        #- yt-dlp-bash-completion
+        - yt-dlp-fish-completion
       # Terminal
         - alacritty
         - kitty
@@ -126,17 +127,17 @@ modules:
         - xdg-desktop-portal-hyprland # desktop portal
 
       # nwg-shell
-        - nwg-shell
-        - nwg-bar
-        - nwg-displays
-        - nwg-dock
-        - nwg-drawer
-        - nwg-icon-picker
-        - nwg-look
-        - nwg-menu
-        - nwg-panel
-        - nwg-shell-config
-        - nwg-shell-wallpapers
+      #  - nwg-shell
+      #  - nwg-bar
+      #  - nwg-displays
+      #  - nwg-dock
+      #  - nwg-drawer
+      #  - nwg-icon-picker
+      #  - nwg-look
+      #  - nwg-menu
+      #  - nwg-panel
+      #  - nwg-shell-config
+      #  - nwg-shell-wallpapers
 
       # audio
         - pavucontrol
@@ -177,6 +178,13 @@ modules:
         - waybar
         - wl-clipboard
 
+      # Hardware
+        - iio-sensor-proxy # screen to auto-rotate lenovo yoga
+        - fprintd # https://discussion.fedoraproject.org/t/fingerprint-reader-does-not-work/104739/2
+        - fprintd-pam
+        - powertop
+        #- tlp
+        #- tlp-rdw
 
     remove:
       - firefox # default firefox removed in favor of flatpak
@@ -209,7 +217,8 @@ modules:
         - fr.nytuo.cosmiccomics
         # UTILS
         - com.github.tchx84.Flatseal
-        #- io.github.thetumultuousunicornofdarkness.cpu-x
+        - io.github.thetumultuousunicornofdarkness.cpu-x
+        #- com.github.d4nj1.tlpui
         # GAMES
         - com.valvesoftware.Steam
         # EMULATORS
@@ -226,10 +235,10 @@ modules:
         # JOB
         - com.github.IsmaelMartinez.teams_for_linux
       remove:
-        # - org.gnome.eog
-        #- plasma-discover
-        #- plasma-discover-notifier
-        #- plasma-discover-rpm-ostree
+        - org.gnome.eog
+        - plasma-discover
+        - plasma-discover-notifier
+        - plasma-discover-rpm-ostree
 
   - type: systemd
     system:
