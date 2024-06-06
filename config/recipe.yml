@@ -33,6 +33,7 @@ modules:
         - ansible
         - aria2
         - bat
+        - bc
         - bind-utils
         - btop
         - colordiff
@@ -44,20 +45,32 @@ modules:
         - eza
         - fd-find
         - fish
+        - fontconfig
         - fzf
         - git
+        - git-delta
+        - gitui
+        - gnupg
         - htop
         - inxi
+        - jq
         - less
         - lm_sensors
         - lsof
         - man
+        - mc
         - neofetch
         - neovim
         - net-tools
         - nmon
         - procs
+        - procs
+        - psmisc
         - pv
+        - python3-pip
+        - ripgrep
+        - rng-tools
+        - rsync
         - screen
         - smartmontools
         - stow
@@ -68,8 +81,10 @@ modules:
         - zoxide
       # COMPRESSION
         - p7zip
+        - tar
         - unrar
         - unzip
+        - zstd
       # Iphone and android
         - ifuse
         - libimobiledevice-utils
