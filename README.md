@@ -14,12 +14,26 @@ Also, trying to add hyprland along side KDE so it can be choosen.
     sudo fwupdmgr update
     ```
 
-- ~~Enroll TPM keys as LUKS~~ with `ujust setup-luks-tpm-unlock`
-- SecureBoot `unjust enroll-secure-boot-key` ?
-FingerPrint
-fstrim
+[X] ~~Enroll TPM keys as LUKS~~ with `ujust setup-luks-tpm-unlock`
+  [x] to remove or reinstall : `sudo sh /usr/libexec/luks-disable-tpm2-autounlock`
+[X] SecureBoot `unjust enroll-secure-boot-key` ?
+[] systemd-boot 
+[] FingerPrint
+[] fstrim
   [x] working
-  [ ] check timer
+  [] check timer
+[ ] Ansible
+  [] users
+  [] dotfiles
+  [] sysconfig
+[] Distrobox
+  [] Custom images
+[] QEMU
+  [] Windows
+[] Waydroid
+  [] Backup/Restore
+  [] Install applications
+
 
 # ublue-kde-workstation
 
