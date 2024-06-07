@@ -116,6 +116,8 @@ modules:
         - yt-dlp
         #- yt-dlp-bash-completion
         - yt-dlp-fish-completion
+      # Systemd-boot
+        - systemd-boot-unsigned
       # Terminal
         - alacritty
         - kitty
