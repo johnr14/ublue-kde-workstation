@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-kde-workstation
+name: ublue-blaze
 # description will be included in the image's metadata
 description: This is my personal OS KDE image with additionnal applications installed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: quay.io/fedora/fedora-kinoite
-image-version: rawhide # latest is also supported if you want new updates ASAP; rawhide is unavailable
+base-image: ghcr.io/ublue-os/bazzite
+image-version: latest # latest is also supported if you want new updates ASAP; rawhide is unavailable
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,7 +17,6 @@ modules:
           # put configuration files you want in /etc/ on a booted system
           # in /usr/etc/ in the image. read more in files module reference.
           # Build skel to fetch dotfiles
-
         # TODO : COPR   
         #sudo dnf install 'dnf-command(copr)' -y
         #sudo dnf copr enable pennbauman/ports -y
@@ -26,8 +25,8 @@ modules:
 
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repoo
-        - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
-        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
+      #- https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
+      #  - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
     install:
       # BASE
         - ansible
@@ -110,9 +109,15 @@ modules:
       # DEVICES
         - printer-driver-brlaser
       # MULTIMEDIA
+        - mpv
+        - vlc
+        - vlc-gui-qt
+        - vlc-plugins-freeworld
         - yt-dlp
         #- yt-dlp-bash-completion
         - yt-dlp-fish-completion
+      # Systemd-boot
+        - systemd-boot-unsigned
       # Terminal
         - alacritty
         - kitty
@@ -134,12 +139,10 @@ modules:
         - virt-manager
         - virt-top
         - virt-viewer
+      # WEB
+        - firefox
+        - mozilla-ublock-origin
       ################
-        - hyprland
-        - hyprpaper # wallpaper util
-        - hyprpicker # color picker
-        - hyprshot # screenshot util
-        - xdg-desktop-portal-hyprland # desktop portal
 
       # nwg-shell
       #  - nwg-shell
@@ -155,42 +158,42 @@ modules:
       #  - nwg-shell-wallpapers
 
       # audio
-        - pavucontrol
-        - pipewire
-        - playerctl
-        - wireplumber
+      # - pavucontrol
+      # - pipewire
+      # - playerctl
+      # - wireplumber
 
       # bluetooth
-        - blueman
+      #  - blueman
 
       # network
-        - network-manager-applet
-        - NetworkManager-l2tp-gnome
-        - NetworkManager-libreswan-gnome
-        - NetworkManager-openconnect-gnome
-        - NetworkManager-openvpn-gnome
-        - NetworkManager-pptp-gnome
-        - NetworkManager-sstp-gnome
-        - NetworkManager-vpnc-gnome
+      # - network-manager-applet
+      # - NetworkManager-l2tp-gnome
+      # - NetworkManager-libreswan-gnome
+      # - NetworkManager-openconnect-gnome
+      # - NetworkManager-openvpn-gnome
+      # - NetworkManager-pptp-gnome
+      # - NetworkManager-sstp-gnome
+      # - NetworkManager-vpnc-gnome
 
       # qt
-        - qt5-qtwayland
-        - qt6-qtwayland
+      # - qt5-qtwayland
+      # - qt6-qtwayland
 
       # other
-        - bolt
-        - brightnessctl
-        - dunst # notification daemon
-        - fprintd-pam
-        - gnome-keyring-pam
-        - lxqt-policykit
-        - nautilus
-        - pinentry-gnome3
-        - plymouth-system-theme
-        - rofi-wayland
-          #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
-        - system-config-printer
-        - waybar
+      # - bolt
+      # - brightnessctl
+      # - dunst # notification daemon
+      # - fprintd-pam
+      # - gnome-keyring-pam
+      # - lxqt-policykit
+      # - nautilus
+      # - pinentry-gnome3
+      # - plymouth-system-theme
+      # - rofi-wayland
+      #   #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
+      # - system-config-printer
+      # - waybar
         - wl-clipboard
 
       # Hardware
@@ -202,8 +205,8 @@ modules:
         #- tlp-rdw
 
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      #- firefox # default firefox removed in favor of flatpak
+      #- firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -244,7 +247,7 @@ modules:
         #- org.scummvm.ScummVM
         # OFFICE
         - org.libreoffice.LibreOffice
-        - org.gnu.emacs
+        # - org.gnu.emacs
         - org.gimp.GIMP
         - org.kde.kdenlive
         # JOB

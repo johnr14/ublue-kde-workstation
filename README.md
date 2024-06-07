@@ -5,6 +5,36 @@ Image is set to rawhide from original Fedora Kinoite.
 I added most applicastions I used and wanted available on my system. For the rest, using toolbox/distrobox is ok.
 Also, trying to add hyprland along side KDE so it can be choosen.
 
+#TODO
+- upfwd
+    ```
+    # WARNING: Do this before secureboot and luks-tpm or it will break them
+    sudo fwupdmgr refresh --force && \
+    sudo fwupdmgr get-updates && \
+    sudo fwupdmgr update
+    ```
+
+[X] ~~Enroll TPM keys as LUKS~~ with `ujust setup-luks-tpm-unlock`
+  [x] to remove or reinstall : `sudo sh /usr/libexec/luks-disable-tpm2-autounlock`
+[X] SecureBoot `unjust enroll-secure-boot-key` ?
+[] systemd-boot 
+[] FingerPrint
+[] fstrim
+  [x] working
+  [] check timer
+[ ] Ansible
+  [] users
+  [] dotfiles
+  [] sysconfig
+[] Distrobox
+  [] Custom images
+[] QEMU
+  [] Windows
+[] Waydroid
+  [] Backup/Restore
+  [] Install applications
+
+
 # ublue-kde-workstation
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
