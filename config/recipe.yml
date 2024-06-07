@@ -110,6 +110,10 @@ modules:
       # DEVICES
         - printer-driver-brlaser
       # MULTIMEDIA
+        - mpv
+        - vlc
+        - vlc-gui-qt
+        - vlc-plugins-freeworld
         - yt-dlp
         #- yt-dlp-bash-completion
         - yt-dlp-fish-completion
@@ -134,6 +138,9 @@ modules:
         - virt-manager
         - virt-top
         - virt-viewer
+      # WEB
+        - firefox
+        - mozilla-ublock-origin
       ################
 
       # nwg-shell
