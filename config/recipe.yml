@@ -4,8 +4,8 @@ name: ublue-kde-workstation
 description: This is my personal OS KDE image with additionnal applications installed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: quay.io/fedora/fedora-kinoite
-image-version: rawhide # latest is also supported if you want new updates ASAP; rawhide is unavailable
+base-image: ghcr.io/blue-os/bazzite-gnome
+image-version: stable # latest is also supported if you want new updates ASAP; rawhide is unavailable
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -26,8 +26,8 @@ modules:
 
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repoo
-        - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
-        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
+      #- https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
+      #  - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
     install:
       # BASE
         - ansible
@@ -135,11 +135,11 @@ modules:
         - virt-top
         - virt-viewer
       ################
-        - hyprland
-        - hyprpaper # wallpaper util
-        - hyprpicker # color picker
-        - hyprshot # screenshot util
-        - xdg-desktop-portal-hyprland # desktop portal
+      # - hyprland
+      # - hyprpaper # wallpaper util
+      # - hyprpicker # color picker
+      # - hyprshot # screenshot util
+      # - xdg-desktop-portal-hyprland # desktop portal
 
       # nwg-shell
       #  - nwg-shell
@@ -155,42 +155,42 @@ modules:
       #  - nwg-shell-wallpapers
 
       # audio
-        - pavucontrol
-        - pipewire
-        - playerctl
-        - wireplumber
+      # - pavucontrol
+      # - pipewire
+      # - playerctl
+      # - wireplumber
 
       # bluetooth
-        - blueman
+      #  - blueman
 
       # network
-        - network-manager-applet
-        - NetworkManager-l2tp-gnome
-        - NetworkManager-libreswan-gnome
-        - NetworkManager-openconnect-gnome
-        - NetworkManager-openvpn-gnome
-        - NetworkManager-pptp-gnome
-        - NetworkManager-sstp-gnome
-        - NetworkManager-vpnc-gnome
+      # - network-manager-applet
+      # - NetworkManager-l2tp-gnome
+      # - NetworkManager-libreswan-gnome
+      # - NetworkManager-openconnect-gnome
+      # - NetworkManager-openvpn-gnome
+      # - NetworkManager-pptp-gnome
+      # - NetworkManager-sstp-gnome
+      # - NetworkManager-vpnc-gnome
 
       # qt
-        - qt5-qtwayland
-        - qt6-qtwayland
+      # - qt5-qtwayland
+      # - qt6-qtwayland
 
       # other
-        - bolt
-        - brightnessctl
-        - dunst # notification daemon
-        - fprintd-pam
-        - gnome-keyring-pam
-        - lxqt-policykit
-        - nautilus
-        - pinentry-gnome3
-        - plymouth-system-theme
-        - rofi-wayland
-          #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
-        - system-config-printer
-        - waybar
+      # - bolt
+      # - brightnessctl
+      # - dunst # notification daemon
+      # - fprintd-pam
+      # - gnome-keyring-pam
+      # - lxqt-policykit
+      # - nautilus
+      # - pinentry-gnome3
+      # - plymouth-system-theme
+      # - rofi-wayland
+      #   #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
+      # - system-config-printer
+      # - waybar
         - wl-clipboard
 
       # Hardware
@@ -244,7 +244,7 @@ modules:
         #- org.scummvm.ScummVM
         # OFFICE
         - org.libreoffice.LibreOffice
-        - org.gnu.emacs
+        # - org.gnu.emacs
         - org.gimp.GIMP
         - org.kde.kdenlive
         # JOB
