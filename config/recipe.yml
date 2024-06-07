@@ -17,7 +17,6 @@ modules:
           # put configuration files you want in /etc/ on a booted system
           # in /usr/etc/ in the image. read more in files module reference.
           # Build skel to fetch dotfiles
-
         # TODO : COPR   
         #sudo dnf install 'dnf-command(copr)' -y
         #sudo dnf copr enable pennbauman/ports -y
