@@ -202,8 +202,8 @@ modules:
         #- tlp-rdw
 
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      #- firefox # default firefox removed in favor of flatpak
+      #- firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
