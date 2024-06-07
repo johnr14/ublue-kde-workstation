@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-my-bazzite
+name: ublue-blaze
 # description will be included in the image's metadata
 description: This is my personal OS KDE image with additionnal applications installed.
 
