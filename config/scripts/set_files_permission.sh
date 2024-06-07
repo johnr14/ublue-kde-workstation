@@ -7,5 +7,3 @@ set -oue pipefail
 
 # Your code goes here.
 chmod a+x /usr/bin/rpm-ostree-check
-
-# Required for mounting efi partition for systemd-boot

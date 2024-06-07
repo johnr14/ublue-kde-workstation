@@ -9,15 +9,17 @@ Also, trying to add hyprland along side KDE so it can be choosen.
 - upfwd
     ```
     # WARNING: Do this before secureboot and luks-tpm or it will break them
+    # Only need to do it once on new install 
     sudo fwupdmgr refresh --force && \
     sudo fwupdmgr get-updates && \
     sudo fwupdmgr update
     ```
-
-[X] ~~Enroll TPM keys as LUKS~~ with `ujust setup-luks-tpm-unlock`
-  [x] to remove or reinstall : `sudo sh /usr/libexec/luks-disable-tpm2-autounlock`
+[X] ~~Enroll TPM keys as LUKS~~ 
+    - `ujust setup-luks-tpm-unlock`
+  [x] to remove or reinstall : 
+    - `sudo sh /usr/libexec/luks-disable-tpm2-autounlock`
 [X] SecureBoot `unjust enroll-secure-boot-key` ?
-[] systemd-boot 
+
 [] FingerPrint
 [] fstrim
   [x] working
