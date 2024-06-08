@@ -39,6 +39,13 @@ This configuration is split as follow :
 - Chezmoi (fetch your dotfiles and system configuration)
 - Fonts (install NerdFonts and GoogleFonts)
 
+TODO:
+  [] on_first_run create users and groups__
+  [] on_first_run create VMs__
+  [] Fix my dotfiles repository and enable it here__
+  [] Distrobox premade containers
+
+
 # After install
 
 I hope you have encrypted your drive !
