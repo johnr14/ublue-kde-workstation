@@ -40,11 +40,11 @@ This configuration is split as follow :
 - Fonts (install NerdFonts and GoogleFonts)
 
 TODO:
-  [] on_first_run create users and groups__
-  [] on_first_run create VMs__
-  [] Fix my dotfiles repository and enable it here__
-  [] Distrobox premade containers
-
+  [] __Distrobox premade containers__
+  [] __Fix my dotfiles repository and enable it here__
+  [] __Hardening__
+  [] __on_first_run create VMs__
+  [] __on_first_run create users and groups__
 
 # After install
 
