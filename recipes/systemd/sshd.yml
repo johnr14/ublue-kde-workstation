@@ -1,4 +1,4 @@
 type: systemd
-  system:
-    enabled:
-      - sshd.service
+system:
+  enabled:
+    - sshd.service

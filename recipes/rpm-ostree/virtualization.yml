@@ -1,17 +1,17 @@
 type: rpm-ostree
-  install:
-    - distrobox
-    - guestfs-tools
-    - libvirt-daemon-config-network
-    - libvirt-daemon-kvm
-    - podman
-    - podman-compose
-    - podman-tui
-    - podmansh
-    - python3-libguestfs
-    - qemu-kvm
-    - toolbox
-    - virt-install
-    - virt-manager
-    - virt-top
-    - virt-viewer
+install:
+  - distrobox
+  - guestfs-tools
+  - libvirt-daemon-config-network
+  - libvirt-daemon-kvm
+  - podman
+  - podman-compose
+  - podman-tui
+  - podmansh
+  - python3-libguestfs
+  - qemu-kvm
+  - toolbox
+  - virt-install
+  - virt-manager
+  - virt-top
+  - virt-viewer

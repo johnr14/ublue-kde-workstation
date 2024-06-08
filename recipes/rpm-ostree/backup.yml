@@ -1,4 +1,4 @@
 type: rpm-ostree
-  install:
-    - borgbackup
-    - borgmatic
+install:
+  - borgbackup
+  - borgmatic

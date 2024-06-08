@@ -1,4 +1,4 @@
 type: rpm-ostree
-  install:
-    - langpacks-en
-    - langpacks-fr
+install:
+  - langpacks-en
+  - langpacks-fr

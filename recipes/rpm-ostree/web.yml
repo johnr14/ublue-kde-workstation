@@ -1,5 +1,5 @@
 type: rpm-ostree
-  install:
-    - firefox
-    - mozilla-ublock-origin
+install:
+  - firefox
+  - mozilla-ublock-origin
 

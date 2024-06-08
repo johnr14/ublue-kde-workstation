@@ -1,8 +1,8 @@
 type: default-flatpaks
-  notify: false # Send notification after install/uninstall is finished (true/false)
-    system:
-      remove:
-        - org.gnome.eog
-        - plasma-discover
-        - plasma-discover-notifier
-        - plasma-discover-rpm-ostree
+notify: false # Send notification after install/uninstall is finished (true/false)
+system:
+  remove:
+    - org.gnome.eog
+    - plasma-discover
+    - plasma-discover-notifier
+    - plasma-discover-rpm-ostree

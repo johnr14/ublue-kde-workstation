@@ -1,9 +1,9 @@
 type: rpm-ostree
-  install:
-    - kate
-    - kdenlive
-    - kompare
-    - krdc
-    - krfb
-    - yakuake 
+install:
+  - kate
+  - kdenlive
+  - kompare
+  - krdc
+  - krfb
+  - yakuake 
 
