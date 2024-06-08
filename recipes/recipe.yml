@@ -17,18 +17,18 @@ modules:
   - from-file: files/files.yml
 
 # Install rpm-ostree packages
-  - from-file: common_modules/rpm-ostree/backup.yml
-  - from-file: common_modules/rpm-ostree/base.yml
-  - from-file: common_modules/rpm-ostree/hardware.yml
-  - from-file: common_modules/rpm-ostree/kde.yml
-  - from-file: common_modules/rpm-ostree/language.yml
-  - from-file: common_modules/rpm-ostree/laptop.yml
-  - from-file: common_modules/rpm-ostree/multimedia.yml
-  - from-file: common_modules/rpm-ostree/printer.yml
-  - from-file: common_modules/rpm-ostree/syncthing.yml
-  - from-file: common_modules/rpm-ostree/terminal.yml
-  - from-file: common_modules/rpm-ostree/virtualization.yml
-  - from-file: common_modules/rpm-ostree/web.yml
+  - from-file: rpm-ostree/backup.yml
+  - from-file: rpm-ostree/base.yml
+  - from-file: rpm-ostree/hardware.yml
+  - from-file: rpm-ostree/kde.yml
+  - from-file: rpm-ostree/language.yml
+  - from-file: rpm-ostree/laptop.yml
+  - from-file: rpm-ostree/multimedia.yml
+  - from-file: rpm-ostree/printer.yml
+  - from-file: rpm-ostree/syncthing.yml
+  - from-file: rpm-ostree/terminal.yml
+  - from-file: rpm-ostree/virtualization.yml
+  - from-file: rpm-ostree/web.yml
 
 # Flatpack:
   - from-file: flatpak/install.yml
