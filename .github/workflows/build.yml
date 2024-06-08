@@ -20,13 +20,18 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: yes # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
           # !! Add your recipes here 
           - recipe.yml
     steps:
        # the build is fully handled by the reusable github action
+      
+      # If you ran out of space during build, this should help
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v7
+
       - name: Build Custom Image
         uses: blue-build/github-action@v1.6.0
         with:
@@ -34,4 +39,4 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
-          squash: true
+          squash: false
