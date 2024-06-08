@@ -17,7 +17,6 @@ modules:
   - from-file: files/files.yml
 
 # Install rpm-ostree packages
-modules:
   - from-file: common_modules/rpm-ostree/backup.yml
   - from-file: common_modules/rpm-ostree/base.yml
   - from-file: common_modules/rpm-ostree/hardware.yml
@@ -32,12 +31,10 @@ modules:
   - from-file: common_modules/rpm-ostree/web.yml
 
 # Flatpack:
-modules:
   - from-file: flatpak/install.yml
   - from-file: flatpak/remove.yml
 
 # Systemd
-modules:
   - from-file: systemd/rpm-ostree-countme.yml # Disable RedHat countme telemetry
   - from-file: systemd/rpm-ostree-boot-check.yml # Run a script on boot
   - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
@@ -45,7 +42,6 @@ modules:
   - from-file: systemd/sshd.yml # Enable sshd
 
 # Scripts
-modules:
   - from-file: scripts/scripts.yml
   #- from-file: scripts/snippets.yml
 
@@ -54,8 +50,6 @@ modules:
 #  - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
 
 # Fonts
-modules:
   - from-file: fonts/fonts.yml
 
-modules:
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
