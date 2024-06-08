@@ -1,0 +1,8 @@
+type: rpm-ostree
+  install:
+    - fprintd
+    - fprintd-pam
+    - iio-sensor-proxy
+    - powertop
+    - tlp
+    - tlp-rdw

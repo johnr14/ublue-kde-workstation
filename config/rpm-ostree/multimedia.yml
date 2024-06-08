@@ -1,0 +1,11 @@
+type: rpm-ostree
+  install:
+    - ffmpeg-free
+    - ffmpegthumbnailer
+    - mpv
+    - vlc
+    - vlc-gui-qt
+    - vlc-plugins-freeworld
+    - yt-dlp
+    - yt-dlp-bash-completion
+    - yt-dlp-fish-completion

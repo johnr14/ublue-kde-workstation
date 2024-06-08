@@ -1,29 +1,59 @@
-# Custom modification
+# My personal operating system based on Fedora Linux
 
-Image is set to rawhide from original Fedora Kinoite.
+Be sure to have knowledge of [Silverblue](https://fedoraproject.org/atomic-desktops/silverblue/) or [Kinoite](https://fedoraproject.org/atomic-desktops/kinoite/) before trying this !
 
-I added most applicastions I used and wanted available on my system. For the rest, using toolbox/distrobox is ok.
-Also, trying to add hyprland along side KDE so it can be choosen.
+This is using [BlueBuild](https://blue-build.org/) and the power of Github !
+The current base image is [Bazzite](https://bazzite.gg/) but it could change.
 
-#TODO
-- upfwd
-    ```
-    # WARNING: Do this before secureboot and luks-tpm or it will break them
-    # Only need to do it once on new install 
-    sudo fwupdmgr refresh --force && \
-    sudo fwupdmgr get-updates && \
-    sudo fwupdmgr update
-    ```
-[X] ~~Enroll TPM keys as LUKS~~ 
+This is my attempt to have a fully descriptive operating system without the hassle of [NixOS](https://nixos.org/).
+
+# Atomic
+
+From [Project Atomic]() 
+> a set of packages [[...]] pulled together with [rpm-ostree](https://coreos.github.io/rpm-ostree/) to create a filesystem tree that can be deployed, and updated, as an atomic unit. This means that the entire base OS is updated simultaneously, and (just as with Docker containers) can be rolled back if needed.
+
+# Flavor
+
+This is currently a KDE desktop for my computers (laptop and desktop).
+In the future it should contain [Hyprland](https://hyprland.org/). 
+
+# Boot and run
+
+I try to incorporate all I need into the image itself.
+
+# Fork and make your own !
+
+1) Just follow those [instructions](https://blue-build.org/how-to/setup/) to setup Github for automated builds with Actions.
+2) Copy what you want from here !
+
+# Recipe
+
+The recipe.yml is an abstraction layer of [Universal Blue](https://universal-blue.org/)'s Containerfiles.
+
+This configuration is split as follow :
+- Files (copy)
+- Rpm-ostree (packages install)
+- Flatpak (flatpak install/remove)
+- Systemd (manage services)
+- Scripts (run scripts and snippets)
+- Chezmoi (fetch your dotfiles and system configuration)
+- Fonts (install NerdFonts and GoogleFonts)
+
+# After install
+
+I hope you have encrypted your drive !
+
+1) Enroll TPM keys as LUKS
     - `ujust setup-luks-tpm-unlock`
-  [x] to remove or reinstall : 
+  A) to remove or reinstall : 
     - `sudo sh /usr/libexec/luks-disable-tpm2-autounlock`
-[X] SecureBoot `unjust enroll-secure-boot-key` ?
 
+2) SecureBoot 
+  - `unjust enroll-secure-boot-key`
+
+
+# TODO :
 [] FingerPrint
-[] fstrim
-  [x] working
-  [] check timer
 [ ] Ansible
   [] users
   [] dotfiles

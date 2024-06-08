@@ -3,7 +3,7 @@ Description=Run on boot
 
 [Timer]
 OnBootSec=10
-Unit=rpm-ostree-check.service
+Unit=rpm-ostree-boot-check.service
 
 [Install]
 # To have it run only at boot once

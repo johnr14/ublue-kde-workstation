@@ -1,0 +1,11 @@
+# RedHat telemetry disabling  
+type: systemd
+  system:
+    disabled:
+      - rpm-ostree-countme.timer 
+      - rpm-ostree-countme.service
+    masked:
+      - rpm-ostree-countme.service
+      - rpm-ostree-countme.timer
+
+

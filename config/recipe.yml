@@ -11,275 +11,51 @@ image-version: latest # latest is also supported if you want new updates ASAP; r
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
+
+# Files
 modules:
-  - type: files
-    files:
-      - usr: /usr
-          # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system
-          # in /usr/etc/ in the image. read more in files module reference.
-          # Build skel to fetch dotfiles
-        # TODO : COPR   
-        #sudo dnf install 'dnf-command(copr)' -y
-        #sudo dnf copr enable pennbauman/ports -y
-        #sudo dnf install lf -y
+  - from-file: files/files.yml
 
+# Install rpm-ostree packages
+modules:
+  - from-file: common_modules/rpm-ostree/backup.yml
+  - from-file: common_modules/rpm-ostree/base.yml
+  - from-file: common_modules/rpm-ostree/hardware.yml
+  - from-file: common_modules/rpm-ostree/kde.yml
+  - from-file: common_modules/rpm-ostree/language.yml
+  - from-file: common_modules/rpm-ostree/laptop.yml
+  - from-file: common_modules/rpm-ostree/multimedia.yml
+  - from-file: common_modules/rpm-ostree/printer.yml
+  - from-file: common_modules/rpm-ostree/syncthing.yml
+  - from-file: common_modules/rpm-ostree/terminal.yml
+  - from-file: common_modules/rpm-ostree/virtualization.yml
+  - from-file: common_modules/rpm-ostree/web.yml
 
-  - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repoo
-      #- https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-rawhide/tofik-nwg-shell-fedora-rawhide.repo
-      #  - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-rawhide/solopasha-hyprland-fedora-rawhide.repo
-    install:
-      # BASE
-        - ansible
-        - aria2
-        - bat
-        - bc
-        - bind-utils
-        - btop
-        - colordiff
-        - curl
-        - dfc
-        - dua-cli
-        - duf
-        - expect
-        - eza
-        - fd-find
-        - fish
-        - fontconfig
-        - fzf
-        - git
-        - git-delta
-        - gitui
-        - gnupg
-        - htop
-        - inxi
-        - jq
-        - less
-        - lm_sensors
-        - lsof
-        - man
-        - mc
-        - neofetch
-        - neovim
-        - net-tools
-        - nmon
-        - procs
-        - procs
-        - psmisc
-        - pv
-        - python3-pip
-        - ripgrep
-        - rng-tools
-        - rsync
-        - screen
-        - smartmontools
-        - stow
-        - tldr
-        - tmux
-        - tree
-        - wget
-        - zoxide
-      # COMPRESSION
-        - p7zip
-        - tar
-        - unrar
-        - unzip
-        - zstd
-      # Iphone and android
-        - ifuse
-        - libimobiledevice-utils
-        #- nautilus
-        #- nautilus-gsconnect
-        - usbmuxd
-      # ENCRYPTION
-        - pass
-        - gopass
-        - qtpass
-      # KDE
-        - kate
-        - kdenlive
-        - kompare
-        - krdc
-        - krfb
-        - yakuake
-      # LANGUAGE
-        - langpacks-en
-        - langpacks-fr
-      # GAMING
-      #- steam-devices # missing in f40
-      # DEVICES
-        - printer-driver-brlaser
-      # MULTIMEDIA
-        - mpv
-        - vlc
-        - vlc-gui-qt
-        - vlc-plugins-freeworld
-        - yt-dlp
-        #- yt-dlp-bash-completion
-        - yt-dlp-fish-completion
-      # Systemd-boot
-        - systemd-boot-unsigned
-      # Terminal
-        - alacritty
-        - kitty
-      # UTILS
-        - borgbackup
-        - borgmatic
-        - syncthing
-      # VIRTUALIZATION
-      # - akmod-v4l2loopback #for podman_ff missing in rawhide
-        - distrobox
-        - guestfs-tools
-        - libvirt-daemon-config-network
-        - libvirt-daemon-kvm
-        - podman
-        - python3-libguestfs
-        - qemu-kvm
-        - toolbox
-        - virt-install
-        - virt-manager
-        - virt-top
-        - virt-viewer
-      # WEB
-        - firefox
-        - mozilla-ublock-origin
-      ################
+# Flatpack:
+modules:
+  - from-file: flatpak/install.yml
+  - from-file: flatpak/remove.yml
 
-      # nwg-shell
-      #  - nwg-shell
-      #  - nwg-bar
-      #  - nwg-displays
-      #  - nwg-dock
-      #  - nwg-drawer
-      #  - nwg-icon-picker
-      #  - nwg-look
-      #  - nwg-menu
-      #  - nwg-panel
-      #  - nwg-shell-config
-      #  - nwg-shell-wallpapers
+# Systemd
+modules:
+  - from-file: systemd/rpm-ostree-countme.yml # Disable RedHat countme telemetry
+  - from-file: systemd/rpm-ostree-boot-check.yml # Run a script on boot
+  - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
+  - from-file: systemd/rpm-ostreed-firstboot.yml # Run a script on first boot after fresh install
+  - from-file: systemd/sshd.yml # Enable sshd
 
-      # audio
-      # - pavucontrol
-      # - pipewire
-      # - playerctl
-      # - wireplumber
+# Scripts
+modules:
+  - from-file: scripts/scripts.yml
+  #- from-file: scripts/snippets.yml
 
-      # bluetooth
-      #  - blueman
+# Chezmoi
+#modules:
+#  - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
 
-      # network
-      # - network-manager-applet
-      # - NetworkManager-l2tp-gnome
-      # - NetworkManager-libreswan-gnome
-      # - NetworkManager-openconnect-gnome
-      # - NetworkManager-openvpn-gnome
-      # - NetworkManager-pptp-gnome
-      # - NetworkManager-sstp-gnome
-      # - NetworkManager-vpnc-gnome
+# Fonts
+modules:
+  - from-file: fonts/fonts.yml
 
-      # qt
-      # - qt5-qtwayland
-      # - qt6-qtwayland
-
-      # other
-      # - bolt
-      # - brightnessctl
-      # - dunst # notification daemon
-      # - fprintd-pam
-      # - gnome-keyring-pam
-      # - lxqt-policykit
-      # - nautilus
-      # - pinentry-gnome3
-      # - plymouth-system-theme
-      # - rofi-wayland
-      #   #- sddm-wayland-generic # display manager # conflics with with sddm-wayland-plasma-6
-      # - system-config-printer
-      # - waybar
-        - wl-clipboard
-
-      # Hardware
-        - iio-sensor-proxy # screen to auto-rotate lenovo yoga
-        - fprintd # https://discussion.fedoraproject.org/t/fingerprint-reader-does-not-work/104739/2
-        - fprintd-pam
-        - powertop
-        #- tlp
-        #- tlp-rdw
-
-    remove:
-      #- firefox # default firefox removed in favor of flatpak
-      #- firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-
-  - type: default-flatpaks
-    notify: false # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-        # NETWORK
-        - org.mozilla.firefox
-        - com.github.Eloston.UngoogledChromium
-        - io.gitlab.librewolf-community
-        - org.netsurf_browser.NetSurf
-        - org.torproject.torbrowser-launcher
-        - org.mozilla.Thunderbird
-        - xyz.ketok.Speedtest
-        - io.github.bytezz.IPLookup
-        # VIDEO
-        - org.videolan.VLC
-        #- com.obsproject.Studio
-        #- org.kde.kdenlive
-        #- fr.handbrake.ghb
-        #- tv.kodi.Kodi
-        - com.warlordsoftwares.youtube-downloader-4ktube
-        - fr.nytuo.cosmiccomics
-        # UTILS
-        - com.github.tchx84.Flatseal
-        - io.github.thetumultuousunicornofdarkness.cpu-x
-        #- com.github.d4nj1.tlpui
-        # GAMES
-        - com.valvesoftware.Steam
-        # EMULATORS
-        #- org.DolphinEmu.dolphin-emu #Gamecube EMU
-        #- org.ppsspp.PPSSPP
-        #- net.rpcs3.RPCS3 # PS3 EMU
-        #- org.duckstation.DuckStation
-        #- org.scummvm.ScummVM
-        # OFFICE
-        - org.libreoffice.LibreOffice
-        # - org.gnu.emacs
-        - org.gimp.GIMP
-        - org.kde.kdenlive
-        # JOB
-        - com.github.IsmaelMartinez.teams_for_linux
-      remove:
-        - org.gnome.eog
-        - plasma-discover
-        - plasma-discover-notifier
-        - plasma-discover-rpm-ostree
-
-  - type: systemd
-    system:
-      enabled:
-        #- on_boot.service
-        #- rc-local.service
-        - sshd.service
-        - rpm-ostree-check.timer
-      disabled:
-        - rpm-ostree-countme.timer # RedHat telemetry disabling  
-        - rpm-ostree-countme.service
-        #- sshd.service
-      masked:
-        - rpm-ostree-countme.service
-        - rpm-ostree-countme.timer
-      #unmasked:
-      #  - rpm-ostree-countme.service
-      #  - rpm-ostree-countme.timer
-
-  - type: script
-    scripts:
-      - set_files_permission.sh
-
+modules:
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

@@ -1,0 +1,42 @@
+type: default-flatpaks
+  notify: false # Send notification after install/uninstall is finished (true/false)
+  system:
+    install:
+      # NETWORK
+      - org.mozilla.firefox
+      - com.github.Eloston.UngoogledChromium
+      - io.gitlab.librewolf-community
+      - org.netsurf_browser.NetSurf
+      - org.torproject.torbrowser-launcher
+      - org.mozilla.Thunderbird
+      - xyz.ketok.Speedtest
+      - io.github.bytezz.IPLookup
+      # VIDEO
+      - org.videolan.VLC
+      #- com.obsproject.Studio
+      - org.kde.kdenlive
+      - fr.handbrake.ghb
+      - tv.kodi.Kodi
+      - com.warlordsoftwares.youtube-downloader-4ktube
+      - fr.nytuo.cosmiccomics
+      # UTILS
+      - com.github.tchx84.Flatseal
+      - io.github.thetumultuousunicornofdarkness.cpu-x
+      - com.github.d4nj1.tlpui
+      # GAMES
+      #- com.valvesoftware.Steam
+      # EMULATORS
+      #- org.DolphinEmu.dolphin-emu #Gamecube EMU
+      #- org.ppsspp.PPSSPP
+      #- net.rpcs3.RPCS3 # PS3 EMU
+      #- org.duckstation.DuckStation
+      #- org.scummvm.ScummVM
+      # OFFICE
+      - org.libreoffice.LibreOffice
+      #- org.gnu.emacs
+      - org.gimp.GIMP
+      - org.kde.kdenlive
+      # JOB
+      - com.github.IsmaelMartinez.teams_for_linux
+
+

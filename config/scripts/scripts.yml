@@ -1,0 +1,5 @@
+type: script
+  scripts:
+    - set_files_permission.sh
+
+

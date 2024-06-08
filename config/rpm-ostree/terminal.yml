@@ -1,0 +1,6 @@
+type: rpm-ostree
+  install:
+    - alacritty
+    - foot
+    - kitty
+    - yakuake

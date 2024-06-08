@@ -1,0 +1,20 @@
+type: fonts
+fonts:
+  nerd-fonts:
+    - 3270
+    - CascadiaCode
+    - CascadiaMono 
+    - DejaVuSansMono 
+    - FiraCode # don't add spaces or "Nerd Font" suffix.
+    - FiraMono
+    - Hack
+    - IBMPlexMono
+    - IosevkaTerm
+    - JetBrainsMono
+    - NerdFontsSymbolsOnly
+    - SourceCodePro
+    - Terminus
+    - UbuntuMono 
+  google-fonts:
+    - Roboto
+    - Open Sans
