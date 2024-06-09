@@ -1,6 +1,6 @@
 type: chezmoi
 # Git repository to initialize
-repository: "https://example.org/user/dotfiles" # Required - Default: n/a  - Expects type: string
+repository: "https://github.com:johnr14/dotfiles.git" # Required - Default: n/a  - Expects type: string
 # Whether to enable the modules services globally for all users, if false users need to enable services manually
 all-users: true # Optional - Default: true - Expects type: boolean
 # or run per user:

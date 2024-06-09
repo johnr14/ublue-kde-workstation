@@ -46,8 +46,8 @@ modules:
   #- from-file: scripts/snippets.yml
 
 # Chezmoi
-#modules:
-#  - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
+modules:
+  - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
 
 # Fonts
   - from-file: fonts/fonts.yml
