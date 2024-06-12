@@ -59,4 +59,5 @@ install:
   - wl-clipboard
   - zoxide
   - zstd
-
+remove:
+  - plasma-discover-notifier
