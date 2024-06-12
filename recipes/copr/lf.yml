@@ -6,6 +6,6 @@ modules:
       - lf
 
 # disable copr pennbauman's port after install
-  - type: script
-    snippets:
-      - "sudo sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/pennbauman-ports-fedora.repo"
+  #- type: script
+    #snippets:
+      #      - "sudo sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/pennbauman-ports-fedora.repo"
