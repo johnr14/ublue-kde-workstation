@@ -60,6 +60,7 @@ I hope you have encrypted your drive !
 
 
 # TODO :
+[] CHEZMOI
 [] FingerPrint
 [ ] Ansible
   [] users

@@ -1,8 +1,9 @@
 type: chezmoi
+# Use this module just to install chezmoi executable
 # Git repository to initialize
 repository: "https://github.com:johnr14/dotfiles.git" # Required - Default: n/a  - Expects type: string
 # Whether to enable the modules services globally for all users, if false users need to enable services manually
-all-users: true # Optional - Default: true - Expects type: boolean
+all-users: false # Optional - Default: true - Expects type: boolean
 # or run per user:
 #   systemctl enable --user chezmoi-init.service chezmoi-update.timer`
 # Dotfiles will be updated with this interval
