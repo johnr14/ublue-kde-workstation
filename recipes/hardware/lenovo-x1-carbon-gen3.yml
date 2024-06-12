@@ -2,6 +2,9 @@ modules:
   - type: rpm-ostree
     repos:
     - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
+    remove:
+      - fprintd
+      - fprintd-pam
     install:
     - open-fprintd
     - fprintd-clients
