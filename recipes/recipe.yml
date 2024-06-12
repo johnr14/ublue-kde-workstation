@@ -31,6 +31,9 @@ modules:
   - from-file: rpm-ostree/virtualization.yml
   - from-file: rpm-ostree/web.yml
 
+# Install copr    
+  - from-file: copr/lf.yml
+
 # Flatpack:
   - from-file: flatpak/install.yml
   - from-file: flatpak/remove.yml
