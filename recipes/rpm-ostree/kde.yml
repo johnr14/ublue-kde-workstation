@@ -1,6 +1,7 @@
 type: rpm-ostree
 install:
   - kate
+  - kcolorchooser
   - kdenlive
   - kompare
   - krdc
