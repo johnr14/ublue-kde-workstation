@@ -1,21 +1,22 @@
-type: rpm-ostree
-repos:
-  - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
-install:
-  - open-fprintd
-  - fprintd-clients
-  - fprintd-clients-pam 
-  - python3-validity
+modules:
+  - type: rpm-ostree
+    repos:
+    - https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/repo/fedora-%OS_VERSION%/sneexy-python-validity-fedora-%OS_VERSION%.repo
+    install:
+    - open-fprintd
+    - fprintd-clients
+    - fprintd-clients-pam 
+    - python3-validity
 
-type: systemd
-system:
-  enabled:
-    - open-fprintd-resume.service
-    - open-fprintd-suspend.service 
-    - open-fprintd.service 
-    - python3-validity.service
+  - type: systemd
+    system:
+    enabled:
+      - open-fprintd-resume.service
+      - open-fprintd-suspend.service 
+        - open-fprintd.service 
+      - python3-validity.service
 
-type: script
-snippets:
-  - "sudo authselect enable-feature with-fingerprint"
-  - "sudo authselect apply-changes"
+  - type: script
+    snippets:
+      - "sudo authselect enable-feature with-fingerprint"
+      - "sudo authselect apply-changes"
