@@ -1,7 +1,8 @@
 type: rpm-ostree
 install:
-  - fprintd
-  - fprintd-pam
+  # Use fprintd from copr https://copr.fedorainfracloud.org/coprs/sneexy/python-validity/
+  # - fprintd
+  # - fprintd-pam
   - iio-sensor-proxy
   - powertop
   - tlp
