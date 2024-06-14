@@ -3,6 +3,7 @@
 
 type: rpm-ostree
 install:
+  - age
   - ansible
   - aria2
   - bat
@@ -16,6 +17,7 @@ install:
   - duf
   - expect
   - eza
+  - fastfetch
   - fd-find
   - fish
   - fontconfig
@@ -33,7 +35,6 @@ install:
   - lsof
   - man
   - mc
-  - neofetch
   - neovim
   - net-tools
   - nmon
