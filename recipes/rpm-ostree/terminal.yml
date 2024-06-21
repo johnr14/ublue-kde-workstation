@@ -3,4 +3,5 @@ install:
   - alacritty
   - foot
   - kitty
+  - kitty-terminfo
   - yakuake
