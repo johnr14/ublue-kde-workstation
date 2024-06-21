@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: johnr14/ublue-kde-workstation
+  - label: johnr14/ublue-kde-workstation-RAWHIDE
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: ublue-kde-workstation
+      - label: ublue-kde-workstation-RAWHIDE
