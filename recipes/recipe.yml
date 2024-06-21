@@ -5,6 +5,7 @@ name: ublue-kde-workstation
 description: This is my personal OS KDE image with additionnal applications installed.
 
 # the base image to build on top of (FROM) and the version tag to use
+#base-image: ghcr.io/ublue-os/bazzite
 base-image: ghcr.io/ublue-os/bazzite
 image-version: latest # latest is also supported if you want new updates ASAP; rawhide is unavailable
 
@@ -44,6 +45,7 @@ modules:
   - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
   - from-file: systemd/rpm-ostreed-firstboot.yml # Run a script on first boot after fresh install
   - from-file: systemd/sshd.yml # Enable sshd
+  - from-file: systemd/networkmanager-wait-online.yml # Disable wait for online
 
 # Scripts
   - from-file: scripts/scripts.yml
