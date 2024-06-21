@@ -8,3 +8,31 @@ install:
   - yt-dlp
   - yt-dlp-bash-completion
   - yt-dlp-fish-completion
+
+
+  # Media and RPMFusion packages : FROM https://github.com/prydom/my-ostree-build/blob/main/recipes/fedora-kinoite-laptop.yml
+type: rpm-ostree
+install:
+  # Media
+  - libva-utils
+  - mpv
+  # RPMFusion
+  - ffmpeg
+  - ffmpeg-libs
+  - gstreamer1-plugins-bad-freeworld
+  - gstreamer1-plugins-ugly
+  - gstreamer1-vaapi
+  - mesa-va-drivers-freeworld
+  - mesa-vdpau-drivers-freeworld
+remove:
+  # Replace with freeworld packages from rpmfusion
+  - libavfilter-free
+  - libavformat-free
+  - libpostproc-free
+  - libswresample-free
+  - libavutil-free
+  - libswscale-free
+  - libavcodec-free
+  - libavdevice-free
+  - ffmpeg-free
+  - mesa-va-drivers
