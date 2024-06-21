@@ -1,10 +1,23 @@
 type: rpm-ostree
 install:
+  - ark
+  - audiotube
   - kate
+  - kcalc
+  - kcharselect
   - kcolorchooser
+  - kde-connect
+  - kde-connect-nautilus
   - kdenlive
+  - kgraphviewer
+  - kmouth
+  - kommit
   - kompare
+  - korganizer
   - krdc
   - krfb
+  - ksystemlog
+  - marknote
+  - plasma-systemmonitor
+  - spectacle
   - yakuake 
-

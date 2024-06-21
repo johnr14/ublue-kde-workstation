@@ -7,7 +7,7 @@ install:
   - podman
   - podman-compose
   - podman-tui
-  - podmansh
+  #  - podmansh
   - python3-libguestfs
   - qemu-kvm
   - toolbox
