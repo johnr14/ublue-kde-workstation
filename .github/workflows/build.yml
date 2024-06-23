@@ -24,8 +24,9 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe.yml
+          - recipe-bazzite.yml
           - recipe-aurora.yml
+          - recipe-kinoite.yml
     steps:
        # the build is fully handled by the reusable github action
       
@@ -40,4 +41,4 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           #use_unstable_cli: false # this action pulls the main branch of blue-build/cli instead of the stable version
           maximize_build_space: true # run the unwanted software remover to maximize build space 
-          squash: true
+          squash: false
