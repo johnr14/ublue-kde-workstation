@@ -1,0 +1,63 @@
+# image will be published to ghcr.io/<user>/<name>
+
+name: ublue-kde-aurora
+# description will be included in the image's metadata
+description: This is my personal OS KDE image with additionnal applications installed.
+
+# the base image to build on top of (FROM) and the version tag to use
+#base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/aurora
+image-version: latest # latest is also supported if you want new updates ASAP; rawhide is unavailable
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+
+
+modules:
+
+# Files
+  - from-file: files/files.yml
+
+# Install rpm-ostree packages
+  - from-file: rpm-ostree/backup.yml
+  - from-file: rpm-ostree/base.yml
+  - from-file: rpm-ostree/hardware.yml
+  - from-file: rpm-ostree/kde.yml
+  - from-file: rpm-ostree/language.yml
+  - from-file: rpm-ostree/laptop.yml
+  - from-file: rpm-ostree/multimedia.yml
+  - from-file: rpm-ostree/printer.yml
+  - from-file: rpm-ostree/syncthing.yml
+  - from-file: rpm-ostree/terminal.yml
+  - from-file: rpm-ostree/virtualization.yml
+  - from-file: rpm-ostree/web.yml
+
+# Install copr    
+  - from-file: copr/lf.yml
+
+# Flatpack:
+  - from-file: flatpak/install.yml
+  - from-file: flatpak/remove.yml
+
+# Systemd
+  - from-file: systemd/rpm-ostree-countme.yml # Disable RedHat countme telemetry
+  - from-file: systemd/rpm-ostree-boot-check.yml # Run a script on boot
+  - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
+  - from-file: systemd/rpm-ostreed-firstboot.yml # Run a script on first boot after fresh install
+  - from-file: systemd/sshd.yml # Enable sshd
+  - from-file: systemd/networkmanager-wait-online.yml # Disable wait for online
+
+# Scripts
+  - from-file: scripts/scripts.yml
+  #- from-file: scripts/snippets.yml
+
+# Chezmoi
+  - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
+
+# Fonts
+  - from-file: fonts/fonts.yml
+
+# hardware specific
+  - from-file: hardware/lenovo-x1-carbon-gen3.yml
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

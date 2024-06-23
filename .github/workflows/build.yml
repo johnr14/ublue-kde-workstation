@@ -25,6 +25,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe.yml
+          - recipe-aurora.yml
     steps:
        # the build is fully handled by the reusable github action
       
