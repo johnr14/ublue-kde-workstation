@@ -1,7 +1,6 @@
 type: rpm-ostree
 install:
   - pam_yubico
+  - ykocli
   - yubikey-manager 
   - yubikey-manager-qt
-  - yubioath-desktop
-
