@@ -5,6 +5,7 @@ type: rpm-ostree
 install:
   - age
   - ansible
+  - atool
   - bat
   - bc
   - btop
@@ -27,16 +28,19 @@ install:
   - gopass
   - htop
   - inxi
+  - jhead
   - jq
   - lm_sensors
   - man
   - mc
+  - mediainfo
   - neovim
   - p7zip
   - p7zip-plugins
   - procs
   - psmisc
   - python3-pip
+  - ranger
   - ripgrep
   - rdfind
   - rng-tools
@@ -44,6 +48,9 @@ install:
   #  - stow
   - tldr
   - tmux
+  - trash-cli
   - unrar
+  - w3m
+  - w3m-img
   - wl-clipboard
   - zoxide
