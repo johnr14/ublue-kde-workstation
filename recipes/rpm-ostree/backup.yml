@@ -2,3 +2,6 @@ type: rpm-ostree
 install:
   - borgbackup
   - borgmatic
+  - rclone
+  - s3fs-fuse 
+
