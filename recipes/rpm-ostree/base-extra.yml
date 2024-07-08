@@ -1,0 +1,49 @@
+
+# Install base extra packages that provide complete terminal functions without jumping right in a distrobox
+
+type: rpm-ostree
+install:
+  - age
+  - ansible
+  - bat
+  - bc
+  - btop
+  - colordiff
+  - dfc
+  - dua-cli
+  - duf
+  - expect
+  - eza
+  - fastfetch
+  - fd-find
+  - fdupes
+  - fish
+  - fontconfig
+  - fzf
+  - git
+  - git-delta
+  - gitui
+  - gnupg
+  - gopass
+  - htop
+  - inxi
+  - jq
+  - lm_sensors
+  - man
+  - mc
+  - neovim
+  - p7zip
+  - p7zip-plugins
+  - procs
+  - psmisc
+  - python3-pip
+  - ripgrep
+  - rdfind
+  - rng-tools
+  - smartmontools
+  #  - stow
+  - tldr
+  - tmux
+  - unrar
+  - wl-clipboard
+  - zoxide
