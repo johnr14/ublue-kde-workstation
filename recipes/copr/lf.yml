@@ -4,6 +4,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/pennbauman/ports/repo/fedora-%OS_VERSION%/pennbauman-ports-fedora-%OS_VERSION%.repo
     install:
       - lf
+      - zellij
 
 # disable copr pennbauman's port after install
   #- type: script
