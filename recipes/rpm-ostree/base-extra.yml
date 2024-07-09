@@ -53,4 +53,5 @@ install:
   - w3m
   - w3m-img
   - wl-clipboard
+  - zellij
   - zoxide
