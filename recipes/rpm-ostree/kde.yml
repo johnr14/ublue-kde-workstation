@@ -3,7 +3,7 @@ install:
   - ark
   - audiotube
   - darktable
-  - digiKam
+  - digikam
   - gwenview
   - kate
   - kcalc
@@ -23,7 +23,6 @@ install:
   - ksystemlog
   - marknote
   - plasma-systemmonitor
-  - showfoto
   - spectacle
   - yakuake 
 
