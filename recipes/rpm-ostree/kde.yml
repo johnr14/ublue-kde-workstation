@@ -2,6 +2,9 @@ type: rpm-ostree
 install:
   - ark
   - audiotube
+  - darktable
+  - digiKam
+  - gwenview
   - kate
   - kcalc
   - kcharselect
@@ -11,6 +14,7 @@ install:
   - kdenlive
   - kgraphviewer
   - kmouth
+  - koko
   - kommit
   - kompare
   - korganizer
@@ -19,5 +23,7 @@ install:
   - ksystemlog
   - marknote
   - plasma-systemmonitor
+  - showfoto
   - spectacle
   - yakuake 
+
