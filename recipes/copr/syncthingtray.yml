@@ -1,0 +1,14 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://download.opensuse.org/repositories/home:/mkittler/fedora-%OS_VERSION%/home:mkittler.repo
+    install:
+      - syncthingtray-qt6
+      - syncthingplasmoid-qt6
+      - syncthingfileitemaction-qt6
+      - syncthingctl-qt6
+
+# disable copr pennbauman's port after install
+  #- type: script
+    #snippets:
+      #      - "sudo sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/pennbauman-ports-fedora.repo"
