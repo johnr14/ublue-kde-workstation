@@ -1,7 +1,8 @@
 modules:
   - type: rpm-ostree
     repos:
-      - https://download.opensuse.org/repositories/home:/mkittler/Fedora-%OS_VERSION%/home:mkittler.repo
+      #- https://download.opensuse.org/repositories/home:/mkittler/Fedora-%OS_VERSION%/home:mkittler.repo
+      - https://download.opensuse.org/repositories/home:/mkittler/Fedora_40/home:mkittler.repo
     install:
       - syncthingtray-qt6
       - syncthingplasmoid-qt6
