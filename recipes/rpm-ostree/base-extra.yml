@@ -22,6 +22,8 @@ install:
   - fish
   - fontconfig
   - fzf
+  - gcc
+  - gcc-c++
   - git
   - git-delta
   - gitui
@@ -32,6 +34,7 @@ install:
   - jhead
   - jq
   - lm_sensors
+  - make
   - man
   - mc
   - mediainfo
