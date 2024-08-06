@@ -37,6 +37,7 @@ modules:
 # Install copr    
   - from-file: copr/lf.yml
   - from-file: copr/syncthingtray.yml
+  - from-file: copr/lazygit.yml
 
 # Flatpack:
   - from-file: flatpak/install.yml
