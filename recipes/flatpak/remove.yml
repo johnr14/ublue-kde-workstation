@@ -3,6 +3,6 @@ notify: false # Send notification after install/uninstall is finished (true/fals
 system:
   remove:
     - org.gnome.eog
-    - plasma-discover
+    #- plasma-discover
     - plasma-discover-notifier
     - plasma-discover-rpm-ostree
