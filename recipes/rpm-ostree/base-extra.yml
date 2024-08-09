@@ -33,6 +33,7 @@ install:
   - inxi
   - jhead
   - jq
+  #  - libstdc++-static # for neovim ?
   - lm_sensors
   - make
   - man
