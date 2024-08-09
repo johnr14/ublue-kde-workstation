@@ -1,6 +1,7 @@
 type: rpm-ostree
 install:
   #  - ffmpegthumbnailer
+  - gimp
   - mpv
   - vlc
   - vlc-gui-qt
