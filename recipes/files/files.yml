@@ -1,8 +1,10 @@
 type: files
 files:
-  - usr: /usr
+  - source: usr
+    destination: /usr
       # copies config/files/usr into your image's /usr.
-  - etc: /etc
+  - source: etc
+    destination: /etc
       # put configuration files you want in /etc/ on a booted system
       # in /usr/etc/ in the image. read more in files module reference.
 
