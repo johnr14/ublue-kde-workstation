@@ -1,8 +1,8 @@
 # image will be published to ghcr.io/<user>/<name>
 
-name: ublue-bazzite-server
+name: bazzite-server
 # description will be included in the image's metadata
-description: This is my personal OS KDE image with additionnal applications installed.
+description: This is my personal OS server image with additionnal applications installed.
 
 # the base image to build on top of (FROM) and the version tag to use
 #base-image: ghcr.io/ublue-os/bazzite
