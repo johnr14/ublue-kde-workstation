@@ -25,6 +25,7 @@ jobs:
         recipe:
           # !! Add your recipes here 
           - recipe-bazzite.yml
+          - recipe-bazzite-server.yml
           #- recipe-aurora.yml
           #- recipe-kinoite.yml
     steps:
