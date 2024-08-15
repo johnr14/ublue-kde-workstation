@@ -6,7 +6,7 @@ description: This is my personal OS server image with additionnal applications i
 
 # the base image to build on top of (FROM) and the version tag to use
 #base-image: ghcr.io/ublue-os/bazzite
-base-image: ghcr.io/ublue-os/bazzite
+base-image: ghcr.io/ublue-os/ucore-minimal 
 image-version: latest # latest is also supported if you want new updates ASAP; rawhide is unavailable
 
 # module configuration, executed in order
@@ -30,13 +30,13 @@ modules:
   #- from-file: rpm-ostree/printer.yml
   - from-file: rpm-ostree/rocm_ai.yml
   - from-file: rpm-ostree/syncthing.yml
-  #- from-file: rpm-ostree/terminal.yml
-  #- from-file: rpm-ostree/virtualization.yml
+  - from-file: rpm-ostree/terminal.yml
+# from-file: rpm-ostree/virtualization.yml
   #- from-file: rpm-ostree/web.yml
   #- from-file: rpm-ostree/yubikey.yml
 
 # Install copr    
-  - from-file: copr/docker-ce.yml
+  #- from-file: copr/docker-ce.yml
   - from-file: copr/lazygit.yml
   - from-file: copr/lf.yml
   #  - from-file: copr/syncthingtray.yml
@@ -65,5 +65,6 @@ modules:
 
 # hardware specific
   # - from-file: hardware/lenovo-x1-carbon-gen3.yml
+  #
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

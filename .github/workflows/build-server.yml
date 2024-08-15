@@ -1,4 +1,4 @@
-name: bluebuild-server
+name: bluebuild-coreos
 on:
   schedule:
     #- cron: "00 17 * * *" # build at 17:00 UTC every day 
@@ -25,7 +25,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe-bazzite-server.yml
+          - recipe-coreos-server.yml
     steps:
        # the build is fully handled by the reusable github action
       
