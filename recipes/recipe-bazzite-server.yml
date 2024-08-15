@@ -23,26 +23,26 @@ modules:
   - from-file: rpm-ostree/base-extra.yml
   - from-file: rpm-ostree/base.yml
   - from-file: rpm-ostree/hardware.yml
-  - from-file: rpm-ostree/kde.yml
-  - from-file: rpm-ostree/language.yml
-  - from-file: rpm-ostree/laptop.yml
+  #- from-file: rpm-ostree/kde.yml
+  #- from-file: rpm-ostree/language.yml
+  #- from-file: rpm-ostree/laptop.yml
   - from-file: rpm-ostree/multimedia.yml
   - from-file: rpm-ostree/printer.yml
   - from-file: rpm-ostree/rocm_ai.yml
   - from-file: rpm-ostree/syncthing.yml
   - from-file: rpm-ostree/terminal.yml
   - from-file: rpm-ostree/virtualization.yml
-  - from-file: rpm-ostree/web.yml
+  #- from-file: rpm-ostree/web.yml
   #- from-file: rpm-ostree/yubikey.yml
 
 # Install copr    
   - from-file: copr/docker-ce.yml
   - from-file: copr/lazygit.yml
   - from-file: copr/lf.yml
-  - from-file: copr/syncthingtray.yml
+  #  - from-file: copr/syncthingtray.yml
 
 # Flatpack:
-  - from-file: flatpak/install.yml
+  #- from-file: flatpak/install.yml
   - from-file: flatpak/remove.yml
 
 # Systemd
@@ -61,7 +61,7 @@ modules:
   - from-file: chezmoi/chezmoi.yml # Enable and run chezmoi to set dotfiles
 
 # Fonts
-  - from-file: fonts/fonts.yml
+  #- from-file: fonts/fonts.yml
 
 # hardware specific
   # - from-file: hardware/lenovo-x1-carbon-gen3.yml
