@@ -1,4 +1,4 @@
-name: bluebuild
+name: bluebuild-server
 on:
   schedule:
     #- cron: "00 17 * * *" # build at 17:00 UTC every day 
@@ -8,7 +8,7 @@ on:
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
-      - recipe/recipe-bazzite-server.yml
+      - reciepe/recipe-bazzite.yml
       
   pull_request:
   workflow_dispatch: # allow manually triggering builds
@@ -25,9 +25,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe-bazzite.yml
-          #- recipe-aurora.yml
-          #- recipe-kinoite.yml
+          - recipe-bazzite-server.yml
     steps:
        # the build is fully handled by the reusable github action
       
@@ -42,4 +40,4 @@ jobs:
           pr_event_number: ${{ github.event.number }}
           #use_unstable_cli: false # this action pulls the main branch of blue-build/cli instead of the stable version
           maximize_build_space: true # run the unwanted software remover to maximize build space 
-          squash: false
+          squash: true
