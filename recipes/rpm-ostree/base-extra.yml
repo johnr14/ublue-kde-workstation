@@ -54,7 +54,7 @@ install:
   - tldr
   - tmux
   - trash-cli
-  - unrar
+  #  - unrar
   - w3m
   - w3m-img
   - wl-clipboard
