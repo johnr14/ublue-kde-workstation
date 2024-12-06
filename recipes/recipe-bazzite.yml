@@ -22,6 +22,7 @@ modules:
   - from-file: rpm-ostree/backup.yml
   - from-file: rpm-ostree/base.yml
   - from-file: rpm-ostree/base-extra.yml
+  - from-file: rpm-ostree/emacs.yml
   - from-file: rpm-ostree/hardware.yml
   - from-file: rpm-ostree/kde.yml
   - from-file: rpm-ostree/language.yml

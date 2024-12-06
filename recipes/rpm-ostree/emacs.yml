@@ -1,0 +1,5 @@
+# Install base extra packages that provide complete terminal functions without jumping right in a distrobox
+
+type: rpm-ostree
+install:
+  - emacs
