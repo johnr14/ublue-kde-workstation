@@ -15,7 +15,7 @@ install:
   - dua-cli
   - duf
   - expect
-  - eza
+#  - eza # Was removed from F42
   - fastfetch
   - fd-find
   - fdupes
