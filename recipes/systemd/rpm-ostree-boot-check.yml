@@ -1,7 +1,7 @@
 # Run script on boot to check for rpm-ostree upgrade or first install
-type: systemd
-system:
-  enabled:
+# type: systemd
+# system:
+#   enabled:
     # Enable to run a script on every boot
     #- rpm-ostree-boot-check.service
     #- rpm-ostree-boot-check.timer- 

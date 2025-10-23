@@ -18,8 +18,3 @@ modules:
         - open-fprintd-suspend.service
         - open-fprintd.service
         - python3-validity.service
-
-  - type: script
-    snippets:
-      #- "sudo authselect enable-feature with-fingerprint"
-      #- "sudo authselect apply-changes"

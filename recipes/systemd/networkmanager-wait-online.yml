@@ -1,9 +1,5 @@
-# Disable wait for network
 type: systemd
 system:
   disabled:
-    - NetworkManager-wait-online.service 
-  masked:
-    #    - NetworkManager-wait-online.service
-
+    - NetworkManager-wait-online.service # Disable wait for network
 

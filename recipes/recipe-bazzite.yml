@@ -42,13 +42,13 @@ modules:
 
 # Flatpack:
   - from-file: flatpak/install.yml
-  - from-file: flatpak/remove.yml
+  # - from-file: flatpak/remove.yml # Fails
 
 # Systemd
   - from-file: systemd/rpm-ostree-countme.yml # Disable RedHat countme telemetry
-  - from-file: systemd/rpm-ostree-boot-check.yml # Run a script on boot
-  - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
-  - from-file: systemd/rpm-ostreed-firstboot.yml # Run a script on first boot after fresh install
+  # - from-file: systemd/rpm-ostree-boot-check.yml # Run a script on boot
+  # - from-file: systemd/rpm-ostreed-deployed.yml # Run a script on rpm-ostree rebase/upgrade
+  # - from-file: systemd/rpm-ostreed-firstboot.yml # Run a script on first boot after fresh install
   - from-file: systemd/sshd.yml # Enable sshd
   - from-file: systemd/networkmanager-wait-online.yml # Disable wait for online
 

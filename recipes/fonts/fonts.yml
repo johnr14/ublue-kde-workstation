@@ -1,7 +1,7 @@
 type: fonts
 fonts:
   nerd-fonts:
-    - 3270
+    - "3270"
     - CascadiaCode
     - CascadiaMono 
     - DejaVuSansMono 
