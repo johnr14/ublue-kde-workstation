@@ -39,6 +39,7 @@ modules:
   - from-file: copr/lf.yml
   - from-file: copr/syncthingtray.yml
   - from-file: copr/lazygit.yml
+  - from-file: copr/charm.yml
 
 # Flatpack:
   - from-file: flatpak/install.yml
