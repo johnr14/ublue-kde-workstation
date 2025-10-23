@@ -13,11 +13,11 @@ modules:
 
   - type: systemd
     system:
-    enabled:
-      - open-fprintd-resume.service
-      - open-fprintd-suspend.service 
-        - open-fprintd.service 
-      - python3-validity.service
+      enabled:
+        - open-fprintd-resume.service
+        - open-fprintd-suspend.service
+        - open-fprintd.service
+        - python3-validity.service
 
   - type: script
     snippets:
