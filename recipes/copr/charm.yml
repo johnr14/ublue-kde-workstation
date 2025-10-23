@@ -2,7 +2,6 @@ modules:
   - type: rpm-ostree
     install:
       - crush
-      - glamour
 
 # disable copr pennbauman's port after install
   #- type: script
