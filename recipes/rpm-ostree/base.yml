@@ -19,6 +19,3 @@ install:
   - unzip
   - wget
   - zstd
-remove:
-  - plasma-discover-notifier
-
