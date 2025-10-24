@@ -40,6 +40,7 @@ modules:
   - from-file: copr/syncthingtray.yml
   - from-file: copr/lazygit.yml
   - from-file: copr/charm.yml
+  - from-file: copr/fedora-extra.yml
 
 # Flatpack:
   - from-file: flatpak/install.yml
