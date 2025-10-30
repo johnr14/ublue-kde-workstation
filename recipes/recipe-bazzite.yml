@@ -39,7 +39,7 @@ modules:
   - from-file: copr/lf.yml
   - from-file: copr/syncthingtray.yml
   - from-file: copr/lazygit.yml
-  - from-file: copr/charm.yml
+#  - from-file: copr/charm.yml # disabled in F43, repo not enabled ?
   - from-file: copr/fedora-extra.yml
 
 # Flatpack:
