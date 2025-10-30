@@ -40,7 +40,7 @@ install:
   - mc
   - mediainfo
   - neovim
-  - p7zip
+  #- p7zip
   - p7zip-plugins
   - procs
   - psmisc
