@@ -40,8 +40,8 @@ install:
   - mc
   - mediainfo
   - neovim
-  #- p7zip
-  - p7zip-plugins
+  #- p7zip # 7zip in Fedora 43+
+  #- p7zip-plugins
   - procs
   - psmisc
   - python3-pip
