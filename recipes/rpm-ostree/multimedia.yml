@@ -6,5 +6,5 @@ install:
   - vlc
   - vlc-gui-qt
   - yt-dlp
-  - yt-dlp-bash-completion
-  - yt-dlp-fish-completion
+#  - yt-dlp-bash-completion
+#  - yt-dlp-fish-completion
