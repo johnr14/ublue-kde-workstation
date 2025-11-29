@@ -32,7 +32,7 @@ modules:
   - from-file: rpm-ostree/syncthing.yml
   - from-file: rpm-ostree/terminal.yml
   - from-file: rpm-ostree/virtualization.yml
-  - from-file: rpm-ostree/web.yml
+#  - from-file: rpm-ostree/web.yml
   - from-file: rpm-ostree/yubikey.yml
 
 # Install copr    
