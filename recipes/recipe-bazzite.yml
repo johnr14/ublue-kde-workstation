@@ -18,9 +18,6 @@ modules:
 # Files
   - from-file: files/files.yml
 
-# RPM-FUSION
-  - from-file: copr/rpm-fusion.yml
-
 # Install rpm-ostree packages
   - from-file: rpm-ostree/backup.yml
   - from-file: rpm-ostree/base.yml
