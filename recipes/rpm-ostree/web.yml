@@ -1,5 +1,8 @@
+
 type: rpm-ostree
 install:
   - firefox
   - mozilla-ublock-origin
+remove:
+  - noopenh264
 
