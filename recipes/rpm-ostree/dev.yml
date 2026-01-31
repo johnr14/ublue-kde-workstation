@@ -1,0 +1,6 @@
+
+type: rpm-ostree
+install:
+  - cargo
+  - rust
+
