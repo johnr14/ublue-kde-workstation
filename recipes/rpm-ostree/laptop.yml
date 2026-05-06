@@ -5,5 +5,3 @@ install:
   # - fprintd-pam
   - iio-sensor-proxy
   - powertop
-  - tlp
-  - tlp-rdw
