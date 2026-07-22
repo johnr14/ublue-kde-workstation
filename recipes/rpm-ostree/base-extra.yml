@@ -50,6 +50,7 @@ install:
   - ripgrep
   - rdfind
   - rng-tools
+  - sqlite
   - smartmontools
   #  - stow
   - tldr
